@@ -1,0 +1,22 @@
+.page-holder {
+  min-height: 100vh;
+}
+
+.bg-cover {
+  background-size: cover !important;
+}
+
+body { 
+  padding-top: 50px; 
+}
+
+.footer-bs{
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 0;
+}
+
+footer {
+  height: 40px;
+}
