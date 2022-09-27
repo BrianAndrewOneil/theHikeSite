@@ -1,20 +1,18 @@
-# Install
+# The Hike Site
+A place to share your adventures and see where other hikers have been.
 
-`npm install`
+**Link to project:** https://brianandrewoneil.github.io/trivia/
 
----
+<img alt="image of web app" src="https://brianandrewoneil.github.io/theHikeSite/img/theHikeSite.PNG" width=50%>
 
-# Things to add
+## How It's Made
 
-- Create a `.env` file in config folder and add the following as `key = value`
-  - PORT = 2121 (can be any port example: 3000)
-  - DB_STRING = `your database URI`
-  - CLOUD_NAME = `your cloudinary cloud name`
-  - API_KEY = `your cloudinary api key`
-  - API_SECRET = `your cloudinary api secret`
+**Tech used:** HTML, CSS, JavaScript, Bootstrap, Node.js, Express.js, MongoDB
 
----
+I built this social media platform...
 
-# Run
+## Optimizations
+Future enhancements for this app include allowing users to curate a list of their favorite hikes.
 
-`npm start`
+## Lessons Learned
+More here re; MVC architecture, express, nodemon, passport, etc.
