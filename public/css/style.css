@@ -20,3 +20,29 @@ body {
 footer {
   height: 40px;
 }
+
+.card img{
+  /* width: 200px;
+  height: 200px; */
+  /* object-fit: cover; */
+
+  max-height: 300px;
+  
+  overflow: hidden ;
+
+  /* width: 23vw;
+  height: 25vw; */
+
+  /* max-height: 23vw;
+  min-height: 23vw;
+  max-width:23vw;
+  min-width: 23vw; */
+}
+
+.card-img-top{
+  overflow: hidden !important;
+}
+
+.postImage{
+  max-height: 900px;
+}
