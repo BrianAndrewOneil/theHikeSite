@@ -9,10 +9,10 @@ A place to share your adventures and see where other hikers have been.
 
 **Tech used:** HTML, CSS, JavaScript, Bootstrap, Node.js, Express.js, MongoDB
 
-I built this social media platform...
+I built this social media platform to allow users to create an account and then post pics and descriptions of their hikes. There's a shared feed so that users can see everyone's hikes and can click into individual posts to read more, like, comment, etc.
 
 ## Optimizations
-Future enhancements for this app include allowing users to curate a list of their favorite hikes.
+Future enhancements for this app will include allowing users to curate a list of their favorite hikes, and allowing posters to include multiple images of their hikes.
 
 ## Lessons Learned
-More here re; MVC architecture, express, nodemon, passport, etc.
+This project was a deep dive into MVC architecture and features of express & middlewar like nodemon, passport, cloudinary, multer, etc.
