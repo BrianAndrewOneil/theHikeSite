@@ -1,7 +1,7 @@
 # The Hike Site
 A place to share your adventures and see where other hikers have been.
 
-**Link to project:** https://brianandrewoneil.github.io/xxxxx/
+**COMING SOON: Link to project:** https://brianandrewoneil.github.io/xxxxx/
 
 <img alt="image of web app" src="https://brianandrewoneil.github.io/TicTacToe/img/theHikeSite.png" width=50%>
 
