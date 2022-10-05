@@ -15,4 +15,4 @@ I built this social media platform to allow users to create an account and then 
 Future enhancements for this app will include allowing users to curate a list of their favorite hikes, and allowing posters to include multiple images of their hikes.
 
 ## Lessons Learned
-This project was a deep dive into MVC architecture and features of express & middlewar like nodemon, passport, cloudinary, multer, etc.
+This project was a deep dive into MVC architecture and features of express & middleware like nodemon, passport, cloudinary, multer, etc.
