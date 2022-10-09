@@ -9,8 +9,8 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 //Main Routes - simplified for now
 router.get("/", homeController.getIndex);
 router.get("/profile", ensureAuth, postsController.getProfile);
-//router.get("/feed", ensureAuth, postsController.getFeed); For this app, auth not required to view feed
-router.get("/feed", postsController.getFeed);
+router.get("/feed", ensureAuth, postsController.getFeed);
+//router.get("/feed", postsController.getFeed); use this if auth not required to view feed, otherwise use line above
 router.get("/about", aboutController.getAbout);
 router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);
