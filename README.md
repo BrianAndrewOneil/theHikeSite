@@ -8,7 +8,7 @@ Sample acct: jon@jon.com / password1
 
 ## How It's Made
 
-**Tech used:** HTML, CSS, JavaScript, Bootstrap, Node.js, Express, MongoDB
+**Tech used:** HTML, CSS (Bootstrap), JavaScript, Node.js, Express, MongoDB
 
 I built this social media platform to allow users to create an account and then post pics and descriptions of their hikes. There's a shared feed so that users can see everyone's hikes and can click into individual posts to read more, like, comment, etc.
 
