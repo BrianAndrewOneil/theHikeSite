@@ -1,75 +1,75 @@
 <%- include('partials/header-loggedIn') -%>
-<main class="container">
-  <div class="row justify-content-center mt-5">
-    <div class="col-6">
-      <h2><%= post.title %></h2>
-      <span>from: <%= post.userName %></span>
-      <img class="img-fluid" src="<%= post.image%>" />
-      <div class="row justify-content-between">
+<main class="p-5">
+  <!-- <div class="row justify-content-center mt-5"> -->
+  
+  <div class="container col-12">
+    <h1><%= post.title %></h1>
+    <p class="text-muted small">from: <%= post.userName %>, <%= post.createdAt.toLocaleDateString('en-US') %></p>
+    <p><%= post.caption %></p>
+    <img class="img-fluid postImage" src="<%= post.image%>" />
+          
+    <!-- <div class="d-flex justify-content-between pt-1"> -->
+    <div class="">
+      <div class="py-1">
         <form
-          class="col-1"
           action="/post/likePost/<%= post.id %>?_method=PUT"
           method="POST"
-        >
-          <button class="btn btn-primary fa fa-heart" type="submit"></button>
+          >
+          <button class="btn btn-outline-danger fa fa-heart" type="submit"></button> <%= post.likes %>
         </form>
-        <h3 class="col-3">Likes: <%= post.likes %></h3>
-        <% if(post.user == user.id){ %>
+      </div>
+      
+      <div><% if(post.user == user.id){ %>
         <form
           action="/post/deletePost/<%= post.id %>?_method=DELETE"
-          method="POST"
-          class="col-4"
+          method="POST"  
         >
-          <button class="btn btn-primary fa fa-trash" type="submit"></button>
+          <button class="btn btn-outline-primary fa fa-trash" type="submit"></button> <span>Delete your post</span>
         </form>
-        <% } %>
-      </div>
-    </div>
-    <div class="col-3 mt-5">
-      <p><%= post.caption %></p>
-    </div>
-    <div class="mt-5">
-      <h3>Add a comment</h3>
-      <form action="/comment/createComment/<%= post._id %>" method="POST">
-        <div class="mb-3">
-            <!-- <label for="comment" class="form-label">Keep it classy!</label> -->
-            <input type="text" class="form-control" id="comment" name="comment">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-
-    <div class="mt-5">
-      <h3>Comments</h3>
-      <% if(comments.length===0) { %>
-            <p><em>There are no comments yet for this post. Be the first to add one!</em></p>
-        <% } %>
-      <ul class="col-8 list-group list-group-flush"> 
-        <% for(var i=0; i<comments.length; i++) { %>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <%= comments[i].createdBy %> wrote: <%= comments[i].comment %>
-            
-            <!-- For the next statement, the post controller is passing the user to this view, so we can use "user.id" -->
-            <% if(comments[i].createdById==user.id){ %>
-              <!--For the next statement, look at the controller and pass this method exactly what it expects to receive -->
-              <span><form
-                action="/comment/deleteComment/<%= post.id %>/<%= comments[i]._id %>?_method=DELETE"
-                method="POST"
-                class="col-3"
-              >
-                <button class="btn btn-primary fa fa-trash" type="submit"></button>
-              </form></span>
-              <% } %>
-          </li>
-        <% } %>
-      </ul>
-    </div>
-
-    <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/feed">Return to Feed</a>
+      <% } %></div>
     </div>
   </div>
+    
+  <div class="container col-12 my-3">
+    <h3>Leave a comment</h3>
+    <form action="/comment/createComment/<%= post._id %>" method="POST">
+      <div class="mb-3">
+          <input type="text" class="form-control" id="comment" name="comment" placeholder="be nice!">
+      </div>
+      <button type="submit" class="btn btn-outline-primary">Submit</button>
+    </form>
+  </div>
+
+  <div class="container col-12 my-3">
+    <h3>Comments</h3>
+    <% if(comments.length===0) { %>
+          <p><em>There are no comments yet for this post. Be the first to add one.</em></p>
+      <% } %>
+    <ul class="list-group list-group-flush"> 
+      <% for(var i=0; i<comments.length; i++) { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <%= comments[i].createdBy %> wrote: <%= comments[i].comment %>
+          
+          <!-- For the next statement, the post controller is passing the user to this view, so we can use "user.id" -->
+          <% if(comments[i].createdById==user.id){ %>
+            <!--For the next statement, look at the controller and pass this method exactly what it expects to receive -->
+            <span><form
+              action="/comment/deleteComment/<%= post.id %>/<%= comments[i]._id %>?_method=DELETE"
+              method="POST"
+              class="col-3"
+            >
+              <button class="btn btn-outline-primary fa fa-trash" type="submit"></button>
+            </form></span>
+            <% } %>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+
+    <!-- <div class="col-6 mt-5">
+      <a class="btn btn-primary" href="/profile">Return to Profile</a>
+      <a class="btn btn-primary" href="/feed">Return to Feed</a>
+    </div> -->
 </main>
 
 <%- include('partials/footer') -%>
