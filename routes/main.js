@@ -11,6 +11,7 @@ router.get("/", homeController.getIndex);
 router.get("/profile", ensureAuth, postsController.getProfile);
 router.get("/feed", ensureAuth, postsController.getFeed);
 //router.get("/feed", postsController.getFeed); use this if auth not required to view feed, otherwise use line above
+router.get("/favorites", ensureAuth, postsController.getFavorites);
 router.get("/about", aboutController.getAbout);
 router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);
