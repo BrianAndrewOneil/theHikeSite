@@ -27,5 +27,13 @@
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "validator": "^13.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianAndrewOneil/theHikeSite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BrianAndrewOneil/theHikeSite/issues"
+  },
+  "homepage": "https://github.com/BrianAndrewOneil/theHikeSite#readme"
 }
